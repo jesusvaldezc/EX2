@@ -8,7 +8,6 @@ app.get("/students/:id", (req, res) => {
     var id = req.params.id;
     console.log(id);
     aux.estudiante(id, alumno => {
-      //console.log(alumno);
       res.send({alumno});
     });
   });
@@ -24,8 +23,7 @@ app.get('/met', function (req, res) {
             return res.send({
                 error: error
             })
-        } else {
-            museumData["searchTerm"] = req.query.search    
+        } else {   
             return res.send({
                 museumData
                 });      
